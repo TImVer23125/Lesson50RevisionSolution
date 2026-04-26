@@ -6,6 +6,8 @@
 // Дополнительно в функции необходимо предусмотреть механизм "защиты от дурака"
 // для работы с некорректными данными.
 
+// CPU - O(N)
+// RAM - O(1)
 #include "logic.h"
 
 void reverse(int array[], int size) {
@@ -13,7 +15,9 @@ void reverse(int array[], int size) {
 		return;
 	}
 
-	for (int i = 0; i < size / 2; i++)
+	int n = size / 2;
+
+	for (int i = 0; i < n; i++)
 	{
 		int t = array[i];
 		array[i] = array[size - 1 - i];

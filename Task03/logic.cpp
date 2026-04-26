@@ -8,15 +8,20 @@
 // для работы с некорректными данными (в данном случае функция должна 
 // возвращать значение false).
 
+
 #include "logic.h"
 
+// CPU - O(N*N)
+// RAM - O(1)
+
+// 1 2 3 4 5
 bool is_the_same_elements(int array[], int size) {
 	if (size <= 0) {
 		return false;
-
 	}
 
-	for (int i = 0; i < size; i++)
+	int n = size - 1;
+	for (int i = 0; i < n; i++)
 	{
 		for (int j = i + 1; j < size; j++)
 		{
@@ -24,7 +29,6 @@ bool is_the_same_elements(int array[], int size) {
 				return true;
 			}
 		}
-
 	}
 
 	return false;

@@ -10,11 +10,13 @@
 
 #include "logic.h"
 
+// CPU - O(N)
+// RAM - O(1)
 void swap_extrem_elements(int array[], int size) {
 	int min_index = 0;
 	int max_index = 0;
 
-	for (int i = 0; i < size; i++)
+	for (int i = 1; i < size; i++)
 	{
 		if (array[i] <= array[min_index]) {
 			min_index = i;

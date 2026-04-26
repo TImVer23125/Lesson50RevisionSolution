@@ -9,23 +9,19 @@
 
 #include "logic.h"
 
+// CPU - O(N)
+// RAM - O(1)
 void reverse(int array[], int size, int a, int b) {
-	if (size <= 1) {
+	if (a > b) {
+		int t = a;
+		a = b;
+		b = t;
+	}
+
+	if (size <= 1 || a < 0 || b >= size) {
 		return;
 	}
-
-	if (a < 0) {
-		a = 0;
-	}
-
-	if (b >= size) {
-		b = size - 1;
-	}
-
-	if (a >= b) {
-		return;
-	}
-
+			
 	while (a < b)
 	{
 		int t = array[a];

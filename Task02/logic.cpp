@@ -12,17 +12,33 @@
 // Далее необходимо разработать полноценный или тестовый проект для полной 
 // демонстрации работоспособности данной функции.
 
+
+// CPU - O(N)
+// RAM - O(1)
 double count_sum_elements(double array[], int size){
 	if (size <= 0) {
-		return -1;
+		return -1.0;
 	}
 
-	double sum = 0;
+	double total_sum = 0;
 
 	for (int i = 0; i < size; i++)
 	{
-		sum += array[i];
+		total_sum += array[i];
 	}
 
-	return sum;
+	double average = total_sum / size;
+
+	double result_sum = 0.0;
+
+	for (int i = 0; i < size; i++)
+	{
+		double absolute_value = array[i] < 0 ? -array[i] : array[i];
+
+		if (absolute_value < average) {
+			result_sum += array[i];
+		}
+	}
+
+	return result_sum;
 }

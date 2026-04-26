@@ -8,8 +8,12 @@
 // для работы с некорректными данными (в данном случае функция должна 
 // возвращать значение -1).
 
+
+
 #include "logic.h" 
 
+// CPU - O(N)
+// RAM - O(1)
 int count_nonzero_elements(int array[], int size) {
 	if (size <= 0) {
 		return -1;
