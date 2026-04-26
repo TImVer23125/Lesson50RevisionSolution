@@ -11,3 +11,18 @@
 // 
 // Далее необходимо разработать полноценный или тестовый проект для полной 
 // демонстрации работоспособности данной функции.
+
+double count_sum_elements(double array[], int size){
+	if (size <= 0) {
+		return -1;
+	}
+
+	double sum = 0;
+
+	for (int i = 0; i < size; i++)
+	{
+		sum += array[i];
+	}
+
+	return sum;
+}
